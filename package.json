@@ -1,0 +1,27 @@
+{
+  "name": "realestate-jp-scraper",
+  "version": "1.0",
+  "description": "Scrape Japanese real estate listings from RealEstate.co.jp. Extract property for sale and rent data including price, size, layout, location, and agent details.",
+  "type": "module",
+  "dependencies": {
+    "apify": "^3.7.2",
+    "cheerio": "^1.2.0",
+    "impit": "^0.14.2",
+    "header-generator": "^2.1.80"
+  },
+  "devDependencies": {
+    "@apify/eslint-config": "^2.0.0",
+    "eslint": "^9.29.0",
+    "eslint-config-prettier": "^10.1.5",
+    "prettier": "^3.5.3"
+  },
+  "scripts": {
+    "start": "node src/main.js",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
+  },
+  "author": "Shahid Irfan",
+  "license": "ISC"
+}

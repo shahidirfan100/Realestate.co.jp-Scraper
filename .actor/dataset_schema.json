@@ -1,0 +1,47 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "transformation": { "fields": ["title", "location", "priceFormatted", "size", "station", "url", "imageUrl"] },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "title": { "label": "Property", "format": "text" },
+                    "location": { "label": "Location", "format": "text" },
+                    "priceFormatted": { "label": "Price", "format": "text" },
+                    "size": { "label": "Size", "format": "text" },
+                    "station": { "label": "Station", "format": "text" },
+                    "url": { "label": "URL", "format": "link" },
+                    "imageUrl": { "label": "Image", "format": "image" }
+                }
+            }
+        },
+        "details": {
+            "title": "Details",
+            "transformation": { "fields": ["id", "title", "layout", "location", "priceFormatted", "size", "landRights", "yearBuilt", "structure", "zoning", "directionFacing", "occupancy", "agentName", "galleryImages", "floorPlanImage", "url"] },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "id": { "label": "ID", "format": "text" },
+                    "title": { "label": "Property", "format": "text" },
+                    "layout": { "label": "Layout", "format": "text" },
+                    "location": { "label": "Location", "format": "text" },
+                    "priceFormatted": { "label": "Price", "format": "text" },
+                    "size": { "label": "Size", "format": "text" },
+                    "landRights": { "label": "Land Rights", "format": "text" },
+                    "yearBuilt": { "label": "Year Built", "format": "text" },
+                    "structure": { "label": "Structure", "format": "text" },
+                    "zoning": { "label": "Zoning", "format": "text" },
+                    "directionFacing": { "label": "Facing", "format": "text" },
+                    "occupancy": { "label": "Occupancy", "format": "text" },
+                    "agentName": { "label": "Agent", "format": "text" },
+                    "galleryImages": { "label": "Gallery", "format": "text" },
+                    "floorPlanImage": { "label": "Floor Plan", "format": "image" },
+                    "url": { "label": "URL", "format": "link" }
+                }
+            }
+        }
+    }
+}

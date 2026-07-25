@@ -1,0 +1,75 @@
+{
+    "title": "Japan Real Estate Scraper",
+    "description": "Scrape property listings from RealEstate.co.jp. Provide a start URL or use search filters like location, property type, and price range.",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "startUrl": {
+            "title": "Start URL",
+            "type": "string",
+            "description": "Full RealEstate.co.jp search URL to scrape. Overrides other filters if provided. Example: https://realestate.co.jp/en/forsale/listing?prefecture=JP-13",
+            "editor": "textfield"
+        },
+        "location": {
+            "title": "Location (Prefecture Code)",
+            "type": "string",
+            "description": "Japanese prefecture code. Example: JP-13 (Tokyo), JP-27 (Osaka), JP-14 (Kanagawa). Leave empty for nationwide search.",
+            "editor": "textfield",
+            "prefill": "JP-13"
+        },
+        "propertyType": {
+            "title": "Property Type",
+            "type": "string",
+            "description": "Filter by property type: mansion-apartment, house, office, hotel, landonly, terrace_house, town_house",
+            "editor": "textfield"
+        },
+        "minPrice": {
+            "title": "Minimum Price (JPY)",
+            "type": "integer",
+            "description": "Minimum property price in Japanese Yen.",
+            "minimum": 0,
+            "editor": "number"
+        },
+        "maxPrice": {
+            "title": "Maximum Price (JPY)",
+            "type": "integer",
+            "description": "Maximum property price in Japanese Yen.",
+            "minimum": 0,
+            "editor": "number"
+        },
+        "results_wanted": {
+            "title": "Maximum Results",
+            "type": "integer",
+            "description": "Maximum number of property listings to collect.",
+            "minimum": 1,
+            "default": 20,
+            "editor": "number"
+        },
+        "max_pages": {
+            "title": "Maximum Pages",
+            "type": "integer",
+            "description": "Safety cap on number of search result pages to visit.",
+            "minimum": 1,
+            "default": 10,
+            "editor": "number"
+        },
+        "withDetail": {
+            "title": "Enrich with Detail Data",
+            "type": "boolean",
+            "description": "Visit each property detail page to extract gallery images, floor plan, description, land area, construction year, structure details, and more. Adds ~1s per property.",
+            "default": true,
+            "editor": "checkbox"
+        },
+        "proxyConfiguration": {
+            "title": "Proxy Configuration",
+            "type": "object",
+            "description": "Use Apify Proxy for reliable scraping (residential recommended for Japan).",
+            "editor": "proxy",
+            "default": {
+                "useApifyProxy": false
+            }
+        }
+    },
+    "required": [],
+    "additionalProperties": false
+}
