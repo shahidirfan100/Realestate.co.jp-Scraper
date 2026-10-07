@@ -11,5 +11,12 @@ storage
 # installed files
 node_modules
 
+# local browser profiles and probe artifacts
+.pw-profile*
+.probe-profile*
+dump-*.html
+probe*.mjs
+inspect.mjs
+
 # git folder
 .git

@@ -57,7 +57,7 @@
             "title": "Enrich with Detail Data",
             "type": "boolean",
             "description": "Visit each property detail page to extract gallery images, floor plan, description, land area, construction year, structure details, and more. Adds ~1s per property.",
-            "default": true,
+            "default": false,
             "editor": "checkbox"
         },
         "proxyConfiguration": {
